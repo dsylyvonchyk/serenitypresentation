@@ -10,5 +10,5 @@ To view the report, find index.html file and open it in browser.
 
 Credits:
 QA Turbo school - https://www.qaturbo.com/
-Dmytro Sylyvonchyk - https://www.linkedin.com/in/dmytro-sylyvonchyk-538324138/
+Dmytro Sylyvonchyk - https://www.linkedin.com/in/dmytro-sylyvonchyk
 Serenity BDD project - http://www.thucydides.info/
