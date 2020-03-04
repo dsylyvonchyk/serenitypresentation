@@ -16,8 +16,8 @@ public class SearchResultsSteps {
     public void VerifyLegendHeaders(){
         List<WebElementFacade> actual = page.LegendHeaders();
         for (int i = 0; i < actual.size(); i++) {
-            System.out.println(actual.get(i).getText() + " vs " + page.LegendHeaders_Expected().get(i));
             Assertions.assertThat(actual.get(i).getText())
+                    .as("Legend in section" + i + "is not correct")
                     .isEqualTo(page.LegendHeaders_Expected().get(i));
         }
     }
@@ -27,7 +27,6 @@ public class SearchResultsSteps {
         List<WebElement> actual = page.SortingOptions();
         System.out.println(actual.size());
         for (int i = 0; i < actual.size(); i++) {
-            System.out.println(actual.get(i).getText() + " vs " + page.LegendHeaders_Expected().get(i));
             Assertions.assertThat(actual.get(i).getText())
                     .isEqualTo(page.SortingOptions_Expected().get(i));
         }

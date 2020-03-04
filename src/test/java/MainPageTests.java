@@ -39,8 +39,17 @@ public class MainPageTests {
         steps.VerifySearchFormDisplayed();
     }
 
+    @Title("TS-T19 Verify search results page has correct sorting options")
+    @Test
+    public void SearchResultsSortingOptions() {
+        steps.OpenMainPage();
+        page.CloseSignUpWindow();
+        steps.SearchFor("laptop");
+        searchSteps.VerifySortingOptions();
+    }
+
     @Ignore
-    @Title("TS-T33 Search legend for Monitor query")
+    @Title("TS-T33 Legend headers in left section on Search Results page for Monitor query")
     @Test
     public void SearchResultsLegendHeaders_Monitor() {
         steps.OpenMainPage();
@@ -49,22 +58,13 @@ public class MainPageTests {
         searchSteps.VerifyLegendHeaders();
     }
 
-    @Title("TS-T34 Search legend for Laptop query")
+    @Title("TS-T34 Legend headers in left section on Search Results page for Laptop query")
     @Test
     public void SearchResultsLegendHeaders_Laptop() {
         steps.OpenMainPage();
         page.CloseSignUpWindow();
         steps.SearchFor("laptop");
         searchSteps.VerifyLegendHeaders();
-    }
-
-    @Title("TS-T58 Verify search results page has correct sorting options")
-    @Test
-    public void SearchResultsSortingOptions() {
-        steps.OpenMainPage();
-        page.CloseSignUpWindow();
-        steps.SearchFor("laptop");
-        searchSteps.VerifySortingOptions();
     }
 
     @Title("TS-T112 Each search result has image")
